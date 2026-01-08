@@ -6,7 +6,7 @@
     --botoes-barra-fundo: rgba(202, 202, 202, 0.562);
     --botoes-barra-fundo-hover: rgba(167, 167, 167, 0.562);
 }
-
+/*------------------------------------//-------------------------------*/
 [data-theme="dark"] {
     --bar-fundo: rgba(255, 255, 255, 0.164);
     --bar-fundo-collapsed: rgba(255, 255, 255, 0.164);
@@ -15,7 +15,7 @@
     --botoes-barra-fundo: rgba(255, 255, 255, 0.623);
     --botoes-barra-fundo-hover: rgba(194, 194, 194, 0.562);
 }
-
+/*------------------------------------//-------------------------------*/
 .rodape {
     position: fixed;
     top: 95%;

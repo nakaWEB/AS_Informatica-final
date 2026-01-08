@@ -6,7 +6,7 @@
     --botoes-barra-fundo: rgba(202, 202, 202, 0.562);
     --botoes-barra-fundo-hover: rgba(167, 167, 167, 0.562);
 }
-
+/*------------------------------------//-------------------------------*/
 [data-theme="dark"] {
     --bar-fundo: rgba(255, 255, 255, 0.164);
     --bar-fundo-collapsed: rgba(255, 255, 255, 0.164);
@@ -15,7 +15,7 @@
     --botoes-barra-fundo: rgba(255, 255, 255, 0.623);
     --botoes-barra-fundo-hover: rgba(194, 194, 194, 0.562);
 }
-
+/*------------------------------------//-------------------------------*/
 /* Sidebar */
 .sidebar {
     position: fixed;
@@ -60,17 +60,7 @@
 .sidebar.collapsed .sidebar-header h2 {
     display: none;
 }
-
-.toggle-btn {
-    width: min-content;
-    background: rgb(0, 17, 255);
-    border: none;
-    color: red;
-    font-size: 1.2rem;
-    cursor: pointer;
-    padding: 5px;
-}
-
+/*------------------------------------//-------------------------------*/
 .nav-links {
     display: flex;
     width: min-content;
@@ -106,23 +96,7 @@
 .sidebar.collapsed .nav-links span {
     display: none;
 }
-
-/* Dropdown menu */
-.dropdown-toggle {
-    justify-content: space-between;
-    width: min-content;
-
-}
-
-.arrow {
-    transition: var(--transition);
-    margin-left: auto;
-}
-
-.dropdown.active .arrow {
-    transform: rotate(180deg);
-}
-
+/*------------------------------------//-------------------------------*/
 .sub-menu {
     display: none;
     background-color: var(--botoes-barra-fundo);
@@ -146,7 +120,7 @@
     width: 20vh;
     background-color: var(--botoes-barra-fundo)
 }
-
+/*------------------------------------//-------------------------------*/
 /* Sidebar footer */
 .sidebar-footer {
     width: min-content;
@@ -154,11 +128,6 @@
     bottom: 0;
     padding: 20px;
     border-top: 1px solid rgb(255, 0, 0);
-    align-items: center;
-}
-
-.user-info {
-    margin-bottom: 15px;
     align-items: center;
 }
 
@@ -179,7 +148,7 @@
 .theme-toggle:hover {
     background-color: var(--botoes-barra-fundo-hover);
 }
-
+/*------------------------------------//-------------------------------*/
 /* "barra de pesquisar" */
 .main-content {
     margin-left: 280px;
@@ -231,7 +200,7 @@
 .search-bar button:hover {
     background-color: var(--botoes-barra-fundo-hover);
 }
-
+/*------------------------------------//-------------------------------*/
 /* Responsivi*/
 @media (max-width: 768px) {
     .sidebar {
@@ -255,7 +224,7 @@
         grid-template-columns: 2fr;
     }
 }
-
+/*------------------------------------//-------------------------------*/
 .nav-categoria {
     position: fixed;
     top: 10%;
@@ -289,7 +258,7 @@
     backdrop-filter: blur(2px);
     background: var(--bar-fundo-collapsed);
 }
-
+/*------------------------------------//-------------------------------*/
 .rainbow-text {
   font-size: 25px;
   font-family: "Segoe UI", sans-serif;
@@ -317,8 +286,7 @@
   0%   { background-position: 0% center; }
   100% { background-position: 200% center; }
 }
-
-
+/*------------------------------------//-------------------------------*/
 .teste {
     background: linear-gradient(
     90deg,
