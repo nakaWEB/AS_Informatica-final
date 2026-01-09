@@ -32,11 +32,20 @@ class ProductRouter {
     return match ? match[1] : null;
   }
 
-  // Navegar para produto
-  navigateToProduct(productId) {
-    history.pushState(null, null, `/produto/${productId}`);
+// Navegar para produto
+navigateToProduct(productId) {
+    // ✅ Salva no histórico local (sem conflito de nome)
+    let viewedProducts = JSON.parse(localStorage.getItem('productHistory') || '[]');
+    if (!viewedProducts.includes(productId)) {
+        viewedProducts.unshift(productId);
+        viewedProducts = viewedProducts.slice(0, 10);
+        localStorage.setItem('productHistory', JSON.stringify(viewedProducts));
+    }
+
+    // ✅ Continua com a navegação
+    window.history.pushState(null, null, `/produto/${productId}`);
     this.showProduct(productId);
-  }
+}
 
   // Mostrar produto individual
   showProduct(productId) {

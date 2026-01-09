@@ -1,21 +1,44 @@
-// render-products.js
+// Função para embaralhar array (Fisher-Yates)
+function shuffleArray(array) {
+    const newArray = [...array];
+    for (let i = newArray.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [newArray[i], newArray[j]] = [newArray[j], newArray[i]];
+    }
+    return newArray;
+}
+
+// Substitua a função renderProducts original por esta:
 function renderProducts(products = PRODUTOS) {
-  const grid = document.getElementById('productsGrid');
-  
-  grid.innerHTML = products.map(product => `
-    <div class="product-card" onclick="router.navigateToProduct('${product.id}')">
-      <img src="${product.imagem}" alt="${product.nome}" class="product-card-image">
-      <div class="product-card-content">
-        <h3 class="product-card-title">${product.nome}</h3>
-        <div class="product-card-price">R$ ${product.preco.toFixed(2)}</div>
-        <div class="product-card-tags">
-          ${product.tags.slice(0, 3).map(tag => 
-            `<span class="product-card-tag">${tag}</span>`
-          ).join('')}
+    const grid = document.getElementById('productsGrid');
+
+    const history = JSON.parse(localStorage.getItem('productHistory') || '[]');
+
+    // Separa produtos vistos e não vistos
+    const viewed = products.filter(p => history.includes(p.id));
+    const notViewed = products.filter(p => !history.includes(p.id));
+
+    // Embaralha ambos
+    const shuffledViewed = shuffleArray(viewed);
+    const shuffledNotViewed = shuffleArray(notViewed);
+
+    // Combina: vistos primeiro, depois os outros
+    const finalOrder = [...shuffledViewed, ...shuffledNotViewed];
+
+    grid.innerHTML = finalOrder.map(product => `
+        <div class="product-card" onclick="router.navigateToProduct('${product.id}')">
+            <img src="${product.imagem}" alt="${product.nome}" class="product-card-image">
+            <div class="product-card-content">
+                <h3 class="product-card-title">${product.nome}</h3>
+                <div class="product-card-price">R$ ${product.preco.toFixed(2)}</div>
+                <div class="product-card-tags">
+                    ${product.tags.slice(0, 3).map(tag =>
+                        `<span class="product-card-tag">${tag}</span>`
+                    ).join('')}
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-  `).join('');
+    `).join('');
 }
 
 // Busca em tempo real
