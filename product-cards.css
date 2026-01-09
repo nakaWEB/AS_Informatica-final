@@ -6,7 +6,7 @@
   --card-tag: rgb(0, 0, 0);
   --card-tag-background: rgba(0,123,255,0.1);
 }
-
+/*------------------------------------//-------------------------------*/
 [data-theme="dark"] {
   --card-bg: rgba(255, 255, 255, 0.164);
   --box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
@@ -15,7 +15,7 @@
   --card-tag: rgb(255, 255, 255);
   --card-tag-background: rgba(255, 255, 255, 0.1);
 }
-
+/*------------------------------------//-------------------------------*/
 /* product-cards.css */
 .product-card {
   background: var(--card-bg);

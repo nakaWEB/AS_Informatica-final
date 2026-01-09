@@ -75,13 +75,14 @@
     font-weight: 600;
     border-bottom: 1px solid var(--botoes-barra-fundo-hover);
 }
-
+/*------------------------------------//-------------------------------*/
 [data-theme="dark"] .search-suggestions {
     background: var(--card-bg);
     border-color: var(--border-color);
 }
-
+/*------------------------------------//-------------------------------*/
 [data-theme="dark"] .suggestion-item:hover,
 [data-theme="dark"] .suggestion-item.active {
     background: rgba(255,255,255,0.1);
 }
+/*------------------------------------//-------------------------------*/

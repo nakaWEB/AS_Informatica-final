@@ -5,14 +5,14 @@
     --menu-vertical-a: rgb(0, 0, 0);
     --submenu: rgba(0, 0, 0, 0.164) ;
 }
-
+/*------------------------------------//-------------------------------*/
 [data-theme="dark"] {
     --menu-vertical: rgba(255, 255, 255, 0.164);
     --menu-vertical-a-hover: rgba(255, 255, 255, 0.322);
     --submenu: rgba(255, 255, 255, 0.164) ;
     --menu-vertical-a: rgb(255, 255, 255);
 }
-
+/*------------------------------------//-------------------------------*/
 /* Estilização básica do menu lateral */
 .menu-vertical {
     position: fixed;
@@ -56,7 +56,7 @@
       background: var(--menu-vertical-a-hover);
     backdrop-filter: blur(2px);
 }
-
+/*------------------------------------//-------------------------------*/
 .submenu {
   display: none;
       background: var(--submenu);
@@ -66,7 +66,7 @@
 .submenu.ativo {
   display: block;
 }
-
+/*------------------------------------//-------------------------------*/
 .dropdown > a {
   position: relative;
 }
@@ -81,3 +81,4 @@
 .dropdown > a.ativo::after {
   transform: rotate(180deg);
 }
+/*------------------------------------//-------------------------------*/
