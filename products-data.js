@@ -1,13 +1,13 @@
 const PRODUTOS = [
   {
     id: "lapis-cor",
-    nome: "Lápis de Cor Faber",
+    nome: "Lápis de Cor Faber Castell",
     preco: 28.99,
     imagem: "../lapis faber.webp",
     descricao: "Kit com 24 cores vibrantes, ideal para arte e escola",
     tags: ["material escolar", "desenho", "arte", "lapis", "cores", "escolar"],
     categoria: "papelaria",
-    whatsapp: "https://wa.me/55289992788?text=Olá,%20gostaria%20de%20saber%20o%20Lapis%20de%20cor%20da%20Faber%20castelo"
+    whatsapp: "https://wa.me/55289992788?text=Olá,%20gostaria%20de%20saber%20o%20Lapis%20de%20cor%20da%20Faber%20Castell"
   },
   {
     id: "caderno-tiibra-10-materias",
@@ -17,7 +17,7 @@ const PRODUTOS = [
     descricao: "Capa dura, 200 folhas pautadas",
     tags: ["material escolar", "caderno", "universitario", "estudo", "papelaria"],
     categoria: "papelaria",
-    whatsapp: "https://wa.me/55289992788?text=Olá,%20gostaria%20de%20saber%20sobre%20Caneta%20Esferográfica"
+    whatsapp: "https://wa.me/55289992788?text=Olá,%20gostaria%20de%20saber%20sobre%20o%20Tilibra%20Universitário%2010%20Matérias"
   },
   {
     id: "caneta-esferografica",
@@ -27,7 +27,7 @@ const PRODUTOS = [
     descricao: "Kit com 10 unidades, tinta azul",
     tags: ["material escolar", "caneta", "escrita", "escolar", "papelaria"],
     categoria: "papelaria",
-    whatsapp: "https://wa.me/55289992788?text=Olá,%20gostaria%20de%20saber%20sobre%20Caneta%20Esferográfica"
+    whatsapp: "https://wa.me/55289992788?text=Olá,%20gostaria%20de%20saber%20sobre%20a%20Caneta%20Bic%20Azul%20Esferográfica%20Cristal%2050%20Unidades"
   },
     {
     id: "cardeneta",
@@ -37,7 +37,7 @@ const PRODUTOS = [
     descricao: "Caderno de anotação com molas",
     tags: ["material escolar", "escrita", "escolar", "papelaria"],
     categoria: "papelaria",
-    whatsapp: "https://wa.me/55289992788?text=Olá,%20gostaria%20de%20saber%20sobre%20Caneta%20Esferográfica"
+    whatsapp: "https://wa.me/55289992788?text=Olá,%20gostaria%20de%20saber%20sobre%20a%20Caderneta%20A6%20flexível%20Smile%20Preta%20com%2080%20folhas%20pautadas"
   },
     {
     id: "A-520M",
@@ -47,7 +47,7 @@ const PRODUTOS = [
     descricao: "Caderno de anotação com molas",
     tags: ["Placa mão", "PC", "Computador", "informatica"],
     categoria: "informatica",
-    whatsapp: "https://wa.me/55289992788?text=Olá,%20gostaria%20de%20saber%20sobre%20Caneta%20Esferográfica"
+    whatsapp: "https://wa.me/55289992788?text=Olá,%20gostaria%20de%20saber%20sobre%20a%20Placa%20Mãe%20A520M%20K%20V2%20AMD%20AM4%20MATX%20DDR4%20Gigabyte%20Cor%20Preto"
   },
     {
     id: "Processador-Gamer-Intel-Core-i7-4790",
@@ -57,6 +57,6 @@ const PRODUTOS = [
     descricao: "Caderno de anotação com molas",
     tags: ["PC", "computador", "processador", "intel"],
     categoria: "Informatica",
-    whatsapp: "https://wa.me/55289992788?text=Olá,%20gostaria%20de%20saber%20sobre%20Caneta%20Esferográfica"
+    whatsapp: "https://wa.me/55289992788?text=Olá,%20gostaria%20de%20saber%20sobre%20o%20Processador%20Gamer%20Intel%20Core%20i7-4790%204%20Núcleos%204GHz%20com%20Gráfica%20Integrada%20HD%204600"
   }
 ];
