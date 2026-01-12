@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+
+	<link rel="stylesheet" href="./barra-nav.css">
+	<link rel="stylesheet" href="./body.css">
+	<link rel="stylesheet" href="./carrocel.css">
+	<link rel="stylesheet" href="./rodape.css">
+</head>
+<style>
+	.amostras-acms {
+		position: absolute;
+		top: 30%;
+		left: 0px;
+		width: 99%;
+		background: hsla(0, 0%, 85%, 0.342);
+		backdrop-filter: blur(2px);
+		display: grid;
+		grid-template-columns: repeat(5, 1fr);
+		padding: 0.5%;
+	}
+
+	.card-acm img {
+		width: 90%;
+		height: 90%;
+		border-radius: 20px;
+		border: 1px solid black;
+		transition: 0.2s;
+	}
+
+	.card-acm img:hover {
+		transition: 0.2s;
+		transform: scale(1.11);
+		border-radius: 20px;
+		border: 1px solid black;
+	}
+
+	.amostras-acms>div {
+		display: none;
+	}
+
+	.amostras-acms>div.ativo {
+		display: grid;
+		grid-template-columns: repeat(5, 1fr);
+		padding: 0.5%;
+		flex-wrap: wrap;
+		gap: 10px;
+		width: 500%;
+	}
+
+	.filtros {
+		position: absolute;
+		top: 15%;
+		left: 50%;
+		transform: translateX(-50%);
+		width: min-content;
+		display: flex;
+		background: black;
+	}
+		.filtros p {
+		position: relative;
+		top: 87%;
+	}
+
+	.filtros button {
+		border: 2px solid rgb(0, 255, 42);
+		border-radius: 50%;
+		width: 70px;
+		height: 70px;
+	}
+</style>
+
+<body>
+    <img class="PdF" src="./plano de fundo folha.png" alt="">
+
+    <div class="barra-top"></div>
+    <!-- Sidebar -->
+    <nav class="barra-nav" id="barra-nav">
+<!---------------------------------//---------------------------------->
+        <ul class="nav-links">
+            <li><a href="index.html" class="active"><i class="fas fa-home"></i><span>INICIO</span></a></li>
+            <li><a href="sobre.html" class="active"><i class="fas fa-home"></i><span>QUEM SOMOS</span></a></li>
+            <li><a href="" class="logo"><h1 class="rainbow-text">AS INFORMATICA</h1></a></li>
+            <li><a href="contato.html"><i class="fas fa-envelope"></i><span>CONTATOS</span></a></li>
+            <li><a href="servicos.html"><i class="fas fa-envelope"></i><span>SERVIÇOS</span></a></li>
+        </ul>
+<!---------------------------------//---------------------------------->
+    </nav>
+
+	<div class="filtros">
+		<button onclick="filtrarTipo('solido')"><p>Sólido</p></button>
+		<button onclick="filtrarTipo('brilhante')"><p>Brilhante</p></button>
+		<button onclick="filtrarTipo('metalico')"><p>Metálico</p></button>
+		<button onclick="filtrarTipo('nano')"><p>Nano</p></button>
+		<button onclick="filtrarTipo('madeirado')"><p>Madeirado</p></button>
+		<button onclick="filtrarTipo('natural')"><p>Natural</p></button>
+	</div>
+
+	<div class="amostras-acms">
+		<div class="solido">
+			<div class="card-acm" id="1">
+				<img src="https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_PURE-WHITE_KR100-1024x576.png">
+			</div>
+
+			<div class="card-acm" id="2">
+				<img src="https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_WHITE_KR101-1024x576.png">
+			</div>
+
+			<div class="card-acm" id="3">
+				<img src="https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_BRANCO-POLAR_KR104-1024x576.png">
+			</div>
+
+			<div class="card-acm" id="4">
+				<img src="https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_LIGHT-GREY_KR107-1024x576.png">
+			</div>
+
+			<div class="card-acm" id="5">
+				<img src="https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_OYSTER_KR108-1024x576.png">
+			</div>
+
+			<div class="card-acm" id="6">
+				<img src="https://alucomaxx.com.br/wp-content/uploads/2025/03/SOLIDO_BONE-WHITE_KR106-1024x576.png">
+			</div>
+
+			<div class="card-acm" id="7">
+				<img src="https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_BLACK_KR150-1024x576.png">
+			</div>
+
+			<div class="card-acm" id="8">
+				<img src="https://alucomaxx.com.br/wp-content/uploads/2025/03/SOLIDO_RAL-7021_KR157-1024x576.png">
+			</div>
+
+			<div class="card-acm" id="9">
+				<img src="https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_SIGNAL-GREY_KR250-1024x576.png">
+			</div>
+
+			<div class="card-acm" id="10">
+				<img src="https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_RAL-7037_KR251-1024x576.png">
+			</div>
+
+			<div class="card-acm" id="11">
+				<img src="https://alucomaxx.com.br/wp-content/uploads/2025/03/SOLIDO_RAL-7045_KR253-1024x576.png">
+			</div>
+
+			<div class="card-acm" id="12">
+				<img src="https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_ANTHRACITE_KR257-1024x576.png">
+			</div>
+
+			<div class="card-acm" id="13">
+				<img src="https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_BRONZE-1003_KR307-1024x576.png">
+			</div>
+
+			<div class="card-acm" id="14">
+				<img src="https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_ORANGE-SESI_KR312-1024x576.png">
+			</div>
+
+			<div class="card-acm" id="15">
+				<img
+					src="https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_AZUL-ULTRAMARINE_KR400-1024x576.png">
+			</div>
+
+			<div class="card-acm" id="16">
+				<img src="https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_AZUL-GM_KR401-1024x576.png">
+			</div>
+
+			<div class="card-acm" id="17">
+				<img
+					src="https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_NEW-BLUE-PEUGEOT_KR403-1024x576.png">
+			</div>
+
+			<div class="card-acm" id="18">
+				<img src="https://alucomaxx.com.br/wp-content/uploads/2025/03/SOLIDO_JADE-GL_KR407-1024x576.png">
+			</div>
+
+			<div class="card-acm" id="19">
+				<img src="https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_AZUL-2925C_KR409-1024x576.png">
+			</div>
+
+			<div class="card-acm" id="20">
+				<img src="https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_BLUE-VOLVO_KR410-1024x576.png">
+			</div>
+
+			<div class="card-acm" id="21">
+				<img src="https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_VERDE-FOSCO_KR450-1024x576.png">
+			</div>
+
+			<div class="card-acm" id="22">
+				<img src="https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_VERDE-561C_KR452-1024x576.png">
+			</div>
+
+			<div class="card-acm" id="23">
+				<img src="https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_YELLOW-GREEN_KR454-1024x576.png">
+			</div>
+
+			<div class="card-acm" id="24">
+				<img src="https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_RED-BANK_KR500-1024x576.png">
+			</div>
+
+			<div class="card-acm" id="25">
+				<img src="https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_RUBY_KR501-1024x576.png">
+			</div>
+
+			<div class="card-acm" id="26">
+				<img src="https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_BURGUNDY_KR509-1024x576.png">
+			</div>
+
+			<div class="card-acm" id="27">
+				<img
+					src="https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_YELLOW-RAL-1023_KR702-1024x576.png">
+			</div>
+
+			<div class="card-acm" id="28">
+				<img src="https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_AMARELO-SHELL_KR703-1024x576.png">
+			</div>
+
+			<div class="card-acm" id="29">
+				<img
+					src="https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_AMARELO-RAL-1003_KR705-1024x576.png">
+			</div>
+
+			<div class="card-acm" id="30">
+				<img src="https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_ORANGE_KR710-1024x576.png">
+			</div>
+
+			<div class="card-acm" id="31">
+				<img src="https://alucomaxx.com.br/wp-content/uploads/2025/03/SOLIDO_ORANGE-144C_KR754-1024x576.png">
+			</div>
+
+			<div class="card-acm" id="32">
+				<img src="https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_ROSA-7647C_KR907-1024x576.png">
+			</div>
+
+			<div class="card-acm" id="33">
+				<img src="https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_ROXO-7672C_KR909-1024x576.png">
+			</div>
+
+			<div class="card-acm" id="34">
+				<img src="https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_ROXO-267U_KR914-1024x576.png">
+			</div>
+
+			<div class="card-acm" id="35">
+				<img src="https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_ROSA-RAL-4003_KR925-1024x576.png">
+			</div>
+		</div>
+
+		<div class="brilhante">
+			<div class="card-acm" id="36">
+				<img
+					src="https://alucomaxx.com.br/wp-content/uploads/2025/02/BRILHANTES_BRANCO-ALASKA_KR103-1024x576.png">
+			</div>
+
+			<div class="card-acm" id="37">
+				<img
+					src="https://alucomaxx.com.br/wp-content/uploads/2025/03/BRILHANTES_BRANCO-ALTO-BRILHO_KR133-1024x576.png">
+			</div>
+
+			<div class="card-acm" id="38">
+				<img
+					src="https://alucomaxx.com.br/wp-content/uploads/2025/02/BRILHANTES_PRETO-BRILHANTE_KR151-1024x576.png">
+			</div>
+
+			<div class="card-acm" id="39">
+				<img
+					src="https://alucomaxx.com.br/wp-content/uploads/2025/02/BRILHANTES_AZUL-BRILHANTE_KR406-1024x576.png">
+			</div>
+
+			<div class="card-acm" id="40">
+				<img
+					src="https://alucomaxx.com.br/wp-content/uploads/2025/03/BRILHANTES_AZUL-TURQUESA_KR438-1024x576.png">
+			</div>
+
+			<div class="card-acm" id="41">
+				<img
+					src="https://alucomaxx.com.br/wp-content/uploads/2025/02/BRILHANTES_VERDE-BRILHANTE_KR451-1024x576.png">
+			</div>
+
+			<div class="card-acm" id="42">
+				<img
+					src="https://alucomaxx.com.br/wp-content/uploads/2025/02/BRILHANTES_VERDE-SICOOB_KR453-1024x576.png">
+			</div>
+
+			<div class="card-acm" id="43">
+				<img
+					src="https://alucomaxx.com.br/wp-content/uploads/2025/02/BRILHANTES_VERMELHO-BRILHANTE_KR502-1024x576.png">
+			</div>
+
+			<div class="card-acm" id="44">
+				<img
+					src="https://alucomaxx.com.br/wp-content/uploads/2025/02/BRILHANTES_AMARELO-BRILHANTE_KR701-1024x576.png">
+			</div>
+
+			<div class="card-acm" id="45">
+				<img
+					src="https://alucomaxx.com.br/wp-content/uploads/2025/02/BRILHANTES_LARANJA-BRILHANTE_KR751-1024x576.png">
+			</div>
+		</div>
+
+		<div class="metalico">
+			<div class="card-acm" id="46">
+				<img
+					src="https://alucomaxx.com.br/wp-content/uploads/2025/02/METALICA_BRASIL-SILVER-METALLIC_KR200-1024x576.png">
+			</div>
+
+			<div class="card-acm" id="47">
+				<img
+					src="https://alucomaxx.com.br/wp-content/uploads/2025/02/METALICA_SILVER-METALLIC_KR201-1024x576.png">
+			</div>
+
+			<div class="card-acm" id="48">
+				<img src="https://alucomaxx.com.br/wp-content/uploads/2025/02/METALICA_PRATA_KR202-1024x576.png">
+			</div>
+
+			<div class="card-acm" id="49">
+				<img
+					src="https://alucomaxx.com.br/wp-content/uploads/2025/02/METALICA_SMOKE-SILVER-METALLIC_KR203-1024x576.png">
+			</div>
+
+			<div class="card-acm" id="50">
+				<img
+					src="https://alucomaxx.com.br/wp-content/uploads/2025/02/METALICA_GREY-METALLIC_KR204-1024x576.png">
+			</div>
+
+			<div class="card-acm" id="51">
+				<img
+					src="https://alucomaxx.com.br/wp-content/uploads/2025/02/METALICA_DARK-GREY-METALLIC_KR205-1024x576.png">
+			</div>
+
+			<div class="card-acm" id="52">
+				<img
+					src="https://alucomaxx.com.br/wp-content/uploads/2025/02/METALICA_CINZA-TITANIUM_KR210-1024x576.png">
+			</div>
+
+			<div class="card-acm" id="53">
+				<img
+					src="https://alucomaxx.com.br/wp-content/uploads/2025/02/METALICA_CHAMPAGNE-METALLIC_KR300-1024x576.png">
+			</div>
+
+			<div class="card-acm" id="54">
+				<img
+					src="https://alucomaxx.com.br/wp-content/uploads/2025/02/METALICA_BRONZE-METALLIC_KR302-1024x576.png">
+			</div>
+
+			<div class="card-acm" id="55">
+				<img
+					src="https://alucomaxx.com.br/wp-content/uploads/2025/02/METALICA_BRIGHT-BRONZE-METALLIC_KR306-1024x576.png">
+			</div>
+
+			<div class="card-acm" id="56">
+				<img src="https://alucomaxx.com.br/wp-content/uploads/2025/02/METALICA_BRONZE-1001_KR309-1024x576.png">
+			</div>
+
+			<div class="card-acm" id="57">
+				<img src="https://alucomaxx.com.br/wp-content/uploads/2025/02/METALICA_BRONZE-1002_KR310-1024x576.png">
+			</div>
+
+			<div class="card-acm" id="58">
+				<img
+					src="https://alucomaxx.com.br/wp-content/uploads/2025/02/METALICA_SILVER-GOLDEN_KR311-1024x576.png">
+			</div>
+
+			<div class="card-acm" id="59">
+				<img
+					src="https://alucomaxx.com.br/wp-content/uploads/2025/02/METALICA_GOLD-METALLIC_KR313-1024x576.png">
+			</div>
+
+			<div class="card-acm" id="60">
+				<img
+					src="https://alucomaxx.com.br/wp-content/uploads/2025/02/METALICA_BROWN-METALLIC_KR361-1024x576.png">
+			</div>
+
+			<div class="card-acm" id="61">
+				<img
+					src="https://alucomaxx.com.br/wp-content/uploads/2025/02/METALICA_BLUE-METALLIC_KR404-1024x576.png">
+			</div>
+		</div>
+
+		<div class="nano">
+			<div class="card-acm" id="62">
+				<img src="https://alucomaxx.com.br/wp-content/uploads/2025/02/NANO_WHITE_BR850-1024x576.png">
+			</div>
+
+			<div class="card-acm" id="63">
+				<img src="https://alucomaxx.com.br/wp-content/uploads/2025/02/NANO_BLACK_BR851-1024x576.png">
+			</div>
+
+			<div class="card-acm" id="64">
+				<img src="https://alucomaxx.com.br/wp-content/uploads/2025/02/NANO_CHAMPAGNE_BR852-1024x576.png">
+			</div>
+
+			<div class="card-acm" id="65">
+				<img src="https://alucomaxx.com.br/wp-content/uploads/2025/02/NANO_BRONZE-1001_BR854-1024x576.png">
+			</div>
+
+			<div class="card-acm" id="66">
+				<img src="https://alucomaxx.com.br/wp-content/uploads/2025/02/NANO_ANTHRACITE_BR855-1024x576.png">
+			</div>
+
+			<div class="card-acm" id="67">
+				<img
+					src="https://alucomaxx.com.br/wp-content/uploads/2025/02/NANO_BRASIL-SILVER-METALLIC_BR856-1024x576.png">
+			</div>
+
+			<div class="card-acm" id="68">
+				<img src="https://alucomaxx.com.br/wp-content/uploads/2025/03/NANO_RAL-7044_BR857-1024x576.png">
+			</div>
+		</div>
+
+		<div class="madeirado">
+			<div class="card-acm" id="69">
+				<img src="https://alucomaxx.com.br/wp-content/uploads/2025/02/WOOD_TEKA_BR950-1024x576.png">
+			</div>
+			<div class="card-acm" id="70">
+				<img src="https://alucomaxx.com.br/wp-content/uploads/2025/02/WOOD_CARVALHO-MEL_BR952-1024x576.png">
+			</div>
+
+			<div class="card-acm" id="71">
+				<img src="https://alucomaxx.com.br/wp-content/uploads/2025/02/WOOD_MOGNO-PE_BR955-1024x576.png">
+			</div>
+
+			<div class="card-acm" id="72">
+				<img src="https://alucomaxx.com.br/wp-content/uploads/2025/02/WOOD_DARK_BR956-1024x576.png">
+			</div>
+
+			<div class="card-acm" id="73">
+				<img src="https://alucomaxx.com.br/wp-content/uploads/2025/02/WOOD_WALNUT-NORDIC_BR958-1024x576.png">
+			</div>
+
+			<div class="card-acm" id="74">
+				<img src="https://alucomaxx.com.br/wp-content/uploads/2025/02/WOOD_IMBUIA-PE_BR961-1024x576.png">
+			</div>
+
+			<div class="card-acm" id="75">
+				<img src="https://alucomaxx.com.br/wp-content/uploads/2025/03/WOOD_AMERICAN-OAK_KR971-1024x576.png">
+			</div>
+
+			<div class="card-acm" id="76">
+				<img src="https://alucomaxx.com.br/wp-content/uploads/2025/03/WOOD_MADEIRADO-2_KR973-1024x576.png">
+			</div>
+
+			<div class="card-acm" id="77">
+				<img src="https://alucomaxx.com.br/wp-content/uploads/2025/02/WOOD_CEREJEIRA_KR974-1024x576.png">
+			</div>
+
+			<div class="card-acm" id="78">
+				<img src="https://alucomaxx.com.br/wp-content/uploads/2025/02/WOOD_NEW-MOGNO_KR977-1024x576.png">
+			</div>
+			<div class="card-acm" id="79">
+				<img src="https://alucomaxx.com.br/wp-content/uploads/2025/02/WOOD_SUCUPIRA_KR980-1024x576.png">
+			</div>
+
+			<div class="card-acm" id="80">
+				<img src="https://alucomaxx.com.br/wp-content/uploads/2025/03/WOOD_BLACK_KR983-1024x576.png">
+			</div>
+
+			<div class="card-acm" id="81">
+				<img src="https://alucomaxx.com.br/wp-content/uploads/2025/03/WOOD_MOGNO-CASTANHO_KR987-1024x576.png">
+			</div>
+
+			<div class="card-acm" id="82">
+				<img src="https://alucomaxx.com.br/wp-content/uploads/2025/03/WOOD_BAMBOO_KR990-1024x576.png">
+			</div>
+		</div>
+
+		<div class="natural">
+			<div class="card-acm" id="83">
+				<img
+					src="https://alucomaxx.com.br/wp-content/uploads/2025/02/NATURAL_NATURAL-BRUSHED_BR600-1024x576.png">
+			</div>
+
+			<div class="card-acm" id="84">
+				<img
+					src="https://alucomaxx.com.br/wp-content/uploads/2025/02/NATURAL_STAINLESS-STEEL_BR602-1024x576.png">
+			</div>
+
+			<div class="card-acm" id="85">
+				<img src="https://alucomaxx.com.br/wp-content/uploads/2025/02/NATURAL_MIRROR-GOLD_BR605-1024x576.png">
+			</div>
+
+			<div class="card-acm" id="86">
+				<img src="https://alucomaxx.com.br/wp-content/uploads/2025/02/NATURAL_CORTEN-TK_BR612-1024x576.png">
+			</div>
+
+			<div class="card-acm" id="87">
+				<img
+					src="https://alucomaxx.com.br/wp-content/uploads/2025/02/NATURAL_ALUNATUR-QUARTZINC_BR615-1024x576.png">
+			</div>
+
+			<div class="card-acm" id="88">
+				<img
+					src="https://alucomaxx.com.br/wp-content/uploads/2025/02/NATURAL_OSSIDIANA-VENA-CHIARA_BR620-1024x576.png">
+			</div>
+
+			<div class="card-acm" id="89">
+				<img src="https://alucomaxx.com.br/wp-content/uploads/2025/02/NATURAL_NATURAL-HON_KR606-1024x576.png">
+			</div>
+
+			<div class="card-acm" id="90">
+				<img src="https://alucomaxx.com.br/wp-content/uploads/2025/03/NATURAL_AREIA_KR607-1024x576.png">
+			</div>
+
+			<div class="card-acm" id="91">
+				<img src="https://alucomaxx.com.br/wp-content/uploads/2025/03/NATURAL_TERRA_KR608-1024x576.png">
+			</div>
+
+			<div class="card-acm" id="92">
+				<img src="https://alucomaxx.com.br/wp-content/uploads/2025/03/NATURAL_CORTEN-BLACK_KR610-1024x576.png">
+			</div>
+
+			<div class="card-acm" id="93">
+				<img src="https://alucomaxx.com.br/wp-content/uploads/2025/02/NATURAL_CORTEN-611_KR611-1024x576.png">
+			</div>
+
+			<div class="card-acm" id="94">
+				<img src="https://alucomaxx.com.br/wp-content/uploads/2025/03/NATURAL_CORTEN-624-BR_KR614-1024x576.png">
+			</div>
+
+			<div class="card-acm" id="95">
+				<img src="https://alucomaxx.com.br/wp-content/uploads/2025/02/NATURAL_CONCRETO_KR634-1024x576.png">
+			</div>
+		</div>
+	</div>
+
+	<footer>
+		<p>&copy; 2025 AS Informatica. Todos os direitos reservados.</p>
+	</footer>
+
+	<script>
+		function filtrarTipo(tipo) {
+			const todosDivs = document.querySelectorAll('.amostras-acms > div');
+
+			todosDivs.forEach(div => {
+				div.classList.remove('ativo');
+			});
+
+			if (tipo === 'todos') {
+				todosDivs.forEach(div => div.classList.add('ativo'));
+			} else {
+				const alvo = document.querySelector('.' + tipo);
+				if (alvo) {
+					alvo.classList.add('ativo');
+				}
+			}
+		}
+
+		// Mostrar todos ao carregar a página
+		window.onload = () => filtrarTipo('solido');
+	</script>
+
+</body>
+
+</html>

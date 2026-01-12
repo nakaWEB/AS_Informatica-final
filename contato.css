@@ -53,8 +53,8 @@ body {
     position: fixed;
     top: 13%;
     left: 50%;
-    transform: translateX(-100%);
     width: 50%;
+    transform: translateX(-50%);
     background: var(--bar-fundo);
     backdrop-filter: blur(2px);
     text-align: center;
