@@ -1,172 +1,113 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
+<!---------------------------------//---------------------------------->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Previne zoom e scroll em dispositivos móveis -->
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<meta name="mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<title>AS INFORMATICA PORTIFOLIO</title>
-
-    <link rel="stylesheet" href="./barra-nav.css">
-    <link rel="stylesheet" href="./body.css">
-    <link rel="stylesheet" href="./carrocel.css">
-    <link rel="stylesheet" href="./logo-meio .css">
-    <link rel="stylesheet" href="./banners.css">
+    <title>AS Informatica</title>
+<!---------------------------------//---------------------------------->
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./menu-lateral.css">
+    <link rel="stylesheet" href="./barra-superior.css">
     <link rel="stylesheet" href="./rodape.css">
-    <script src="./corrocel.js"></script>
+    <link rel="stylesheet" href="./product-cards.css">
+    <link rel="stylesheet" href="./product-modal.css">
+    <link rel="stylesheet" href="./search-realtime-adaptado.css">
+<!---------------------------------//---------------------------------->
+    <script src="./search-realtime-adaptado.js"></script>
+    <script src="./products-data.js"></script>
+    <script src="./search-engine.js"></script>
+    <script src="./router.js"></script>
+    <script src="./render-products.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
+<!---------------------------------//---------------------------------->
 <body>
-    <img class="PdF" src="./plano de fundo folha.png" alt="">
-
-    <div class="barra-top"></div>
     <!-- Sidebar -->
-    <nav class="barra-nav" id="barra-nav">
+    <nav class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <h1>AS</h1>
+            <h2> Informatica</h2>
+        </div>
 <!---------------------------------//---------------------------------->
         <ul class="nav-links">
-            <li><a href="index.html" class="active"><i class="fas fa-home"></i><span>INICIO</span></a></li>
-            <li><a href="sobre.html" class="active"><i class="fas fa-home"></i><span>QUEM SOMOS</span></a></li>
-            <li><a href="" class="logo"><h1 class="rainbow-text">AS INFORMATICA</h1></a></li>
-            <li><a href="contato.html"><i class="fas fa-envelope"></i><span>CONTATOS</span></a></li>
-            <li><a href="servicos.html"><i class="fas fa-envelope"></i><span>SERVIÇOS</span></a></li>
+            <li><a href="index.html" class="active"><i class="fas fa-home"></i><span>Home</span></a></li>
+            <li><a href="contato.html"><i class="fas fa-envelope"></i><span>Contato</span></a></li>
+            <li id="adminLink" style="display: none;"><a href="admin.html"><i
+                        class="fas fa-cog"></i><span>Admin</span></a></li>
         </ul>
 <!---------------------------------//---------------------------------->
+        <a href="">
+            <h1 class="rainbow-text">PORTIFOLIO</h1>
+        </a>
+<!---------------------------------//---------------------------------->
+        <button class="theme-toggle" id="themeToggle">
+            <i class="fas fa-moon"></i>
+        </button>
+<!---------------------------------//---------------------------------->
     </nav>
-
-    <div class="meio1"><img class="logo-inc" src="./logo as.svg" alt=""></div>
-    
-    <div class="carousel-container">     
-        <!-- Linha 1 -->
-        <div class="carousel-row" data-row="1">
-            <div class="carousel-track">
-                <!-- Imagens com larguras diferentes -->
-                <div class="carousel-item" style="width: 200px;">
-                    <img src="https://picsum.photos/200/150?random=1" alt="Imagem 1">
+<!---------------------------------//---------------------------------->
+    <nav class="nav-categoria">
+        <header class="header">
+            <div class="search-bar" style="position: relative;">
+                <input type="text" id="searchInput" placeholder="Pesquisar produtos ou tags..." autocomplete="off">
+<!---------------------------------//---------------------------------->
+                <button onclick="performSearch()">
+                    <i class="fas fa-search"></i>
+                </button>
+<!---------------------------------//---------------------------------->
+                <!-- Dropdown de sugestões -->
+                <div id="searchSuggestions" class="search-suggestions" style="display: none;">
+                    <!-- Sugestões aparecerão aqui -->
                 </div>
-                <div class="carousel-item" style="width: 300px;">
-                    <img src="https://picsum.photos/300/150?random=2" alt="Imagem 2">
-                </div>
-                <div class="carousel-item" style="width: 250px;">
-                    <img src="https://picsum.photos/250/150?random=3" alt="Imagem 3">
-                </div>
-                <div class="carousel-item" style="width: 180px;">
-                    <img src="https://picsum.photos/180/150?random=4" alt="Imagem 4">
-                </div>
-                <div class="carousel-item" style="width: 320px;">
-                    <img src="https://picsum.photos/320/150?random=5" alt="Imagem 5">
-                </div>
-                <!-- Repetir para loop suave -->
-                <div class="carousel-item" style="width: 200px;">
-                    <img src="https://picsum.photos/200/150?random=1" alt="Imagem 1">
-                </div>
-                <div class="carousel-item" style="width: 300px;">
-                    <img src="https://picsum.photos/300/150?random=2" alt="Imagem 2">
-                </div>
+<!---------------------------------//---------------------------------->
             </div>
+        </header>
+    </nav>
+<!---------------------------------//---------------------------------->
+    <!-- rederizador de produtos -->
+    <div class="products-container">
+<!---------------------------------//---------------------------------->
+        <!-- Container de tags fixo -->
+        <div class="tags-fixed">
+            <span></span>
+            <div id="popularTags"></div>
         </div>
-
-        <!-- Linha 2 - Direção oposta -->
-        <div class="carousel-row" data-row="2">
-            <div class="carousel-track">
-                <div class="carousel-item" style="width: 280px;">
-                    <img src="https://picsum.photos/280/150?random=6" alt="Imagem 6">
-                </div>
-                <div class="carousel-item" style="width: 220px;">
-                    <img src="https://picsum.photos/220/150?random=7" alt="Imagem 7">
-                </div>
-                <div class="carousel-item" style="width: 350px;">
-                    <img src="https://picsum.photos/350/150?random=8" alt="Imagem 8">
-                </div>
-                <div class="carousel-item" style="width: 190px;">
-                    <img src="https://picsum.photos/190/150?random=9" alt="Imagem 9">
-                </div>
-                <div class="carousel-item" style="width: 310px;">
-                    <img src="https://picsum.photos/310/150?random=10" alt="Imagem 10">
-                </div>
-                <!-- Repetir para loop suave -->
-                <div class="carousel-item" style="width: 280px;">
-                    <img src="https://picsum.photos/280/150?random=6" alt="Imagem 6">
-                </div>
-                <div class="carousel-item" style="width: 220px;">
-                    <img src="https://picsum.photos/220/150?random=7" alt="Imagem 7">
-                </div>
-            </div>
-        </div>
-
-        <!-- Linha 3 -->
-        <div class="carousel-row" data-row="3">
-            <div class="carousel-track">
-                <div class="carousel-item" style="width: 240px;">
-                    <img src="https://picsum.photos/240/150?random=11" alt="Imagem 11">
-                </div>
-                <div class="carousel-item" style="width: 290px;">
-                    <img src="https://picsum.photos/290/150?random=12" alt="Imagem 12">
-                </div>
-                <div class="carousel-item" style="width: 210px;">
-                    <img src="https://picsum.photos/210/150?random=13" alt="Imagem 13">
-                </div>
-                <div class="carousel-item" style="width: 330px;">
-                    <img src="https://picsum.photos/330/150?random=14" alt="Imagem 14">
-                </div>
-                <div class="carousel-item" style="width: 200px;">
-                    <img src="https://picsum.photos/200/150?random=15" alt="Imagem 15">
-                </div>
-                <!-- Repetir para loop suave -->
-                <div class="carousel-item" style="width: 240px;">
-                    <img src="https://picsum.photos/240/150?random=11" alt="Imagem 11">
-                </div>
-                <div class="carousel-item" style="width: 290px;">
-                    <img src="https://picsum.photos/290/150?random=12" alt="Imagem 12">
-                </div>
-            </div>
-        </div>
-
-        <!-- Linha 4 - Direção oposta -->
-        <div class="carousel-row" data-row="4">
-            <div class="carousel-track">
-                <div class="carousel-item" style="width: 270px;">
-                    <img src="https://picsum.photos/270/150?random=16" alt="Imagem 16">
-                </div>
-                <div class="carousel-item" style="width: 230px;">
-                    <img src="https://picsum.photos/230/150?random=17" alt="Imagem 17">
-                </div>
-                <div class="carousel-item" style="width: 300px;">
-                    <img src="https://picsum.photos/300/150?random=18" alt="Imagem 18">
-                </div>
-                <div class="carousel-item" style="width: 185px;">
-                    <img src="https://picsum.photos/185/150?random=19" alt="Imagem 19">
-                </div>
-                <div class="carousel-item" style="width: 295px;">
-                    <img src="https://picsum.photos/295/150?random=20" alt="Imagem 20">
-                </div>
-                <!-- Repetir para loop suave -->
-                <div class="carousel-item" style="width: 270px;">
-                    <img src="https://picsum.photos/270/150?random=16" alt="Imagem 16">
-                </div>
-                <div class="carousel-item" style="width: 230px;">
-                    <img src="https://picsum.photos/230/150?random=17" alt="Imagem 17">
-                </div>
-            </div>
+<!---------------------------------//---------------------------------->
+        <!-- Grid de produtos (scrollável) -->
+        <div id="productsGrid" class="products-grid">
+            <!-- Produtos aqui -->
         </div>
     </div>
-    <script src="./corrocel.js"></script>
+<!---------------------------------//---------------------------------->
+    <!-- fundo + menu lateral -->
+    <main class="main-content">
+        <img class="PdF" src="./plano de fundo folha.png" alt="">
+        <nav class="menu-vertical">
+            <ul id="menu"></ul>
+        </nav>
+    </main>
+<!---------------------------------//---------------------------------->
+    <script src="./theme.js"></script>
+<!---------------------------------//---------------------------------->
+    <script>
+        const nav = document.querySelector('.nav-categoria');
+        const link = document.querySelector('.nav-categoria-link');
 
-    <div class="banner-loja">
-        <div class="banner-maior770">
-            <img class="bannermaiorpng" src="./banner-maior.png" alt="">
-            <img class="logoascoloridasvg" src="./logo as colorida.svg" alt="">
+        // Converte scroll vertical em horizontal
+        nav.addEventListener('wheel', (e) => {
+            e.preventDefault(); // impede scroll vertical
+            nav.scrollLeft += e.deltaY; // move horizontalmente
+        });
+    </script>
+<!---------------------------------//---------------------------------->
+    <script src="./menu-lateral.js"></script>
+<!---------------------------------//---------------------------------->
+    <footer class="rodape">
+        <div class="rodape-bar">
+            <p>&copy; 2025 AS Informatica. Todos os direitos reservados.</p>
         </div>
-        <div class="banner-menor770">
-            <a href="./catalogoacm.html">
-            <img class="banner-menor1png" src="./banner-menor1.png" alt="">
-            </a>
-            <img class="banner-menor2png" src="./banner-menor2.png" alt="">
-        </div>
-    </div>
-
-    <footer>
-    <p>&copy; 2025 AS Informatica. Todos os direitos reservados.</p>
     </footer>
+<!---------------------------------//---------------------------------->
 </body>
 </html>
