@@ -92,3 +92,12 @@ function debounce(func, wait) {
   };
 }
 
+function performSearch() {
+  const query = document.getElementById('searchInput').value;
+  const results = searchEngine.search(query);
+  renderProducts(results);
+}
+
+document.getElementById('searchInput').addEventListener('input', 
+  debounce(performSearch, 300)
+);
