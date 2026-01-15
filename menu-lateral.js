@@ -9,8 +9,8 @@ const dadosTags = [
         tags: ['informatica', 'PC', 'computador', 'processador', 'placa mãe', 'intel', 'AMD']
     },
     {
-        titulo: 'Impressão',
-        tags: ['impressão', 'folha', 'A1', 'A2', 'A3', 'A4', 'A5', 'A6', 'cartolina']
+        titulo: 'Papelaria',
+        tags: ['tinta', 'EPSON', 'impressora', 'folha', 'A1', 'A2', 'A3', 'A4', 'A5', 'A6', 'cartolina']
     },
     {
         titulo: 'Cabos e Acessórios',
@@ -19,10 +19,6 @@ const dadosTags = [
     {
         titulo: 'Adesivos',
         tags: ['adesivo', 'recorte', 'impreço', 'translúcido']
-    },
-    {
-        titulo: 'Tintas',
-        tags: ['tinta', 'EPSON', 'impressora']
     }
 ];
 

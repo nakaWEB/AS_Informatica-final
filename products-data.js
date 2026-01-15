@@ -58,5 +58,35 @@ const PRODUTOS = [
     tags: ["PC", "computador", "processador", "intel"],
     categoria: "Informatica",
     whatsapp: "https://wa.me/55289992788?text=Olá,%20gostaria%20de%20saber%20sobre%20o%20Processador%20Gamer%20Intel%20Core%20i7-4790%204%20Núcleos%204GHz%20com%20Gráfica%20Integrada%20HD%204600"
+  },
+    {
+    id: "PapelSulfiteReportA4Branco75g500folhas",
+    nome: "Papel Sulfite A4 Branco 500 folhas",
+    preco: 33.99,
+    imagem: "../Papel Sulfite Report A4 Branco 75g 500 folhas.jpg",
+    descricao: "Papel Sulfite Report A4 Branco 75g 500 folhas",
+    tags: ["folha", "A4", "papelaria", "impreção"],
+    categoria: "papelaria",
+    whatsapp: "https://wa.me/55289992788?text=Olá,%20gostaria%20de%20saber%20sobre%20o%20Processador%20Gamer%20Intel%20Core%20i7-4790%204%20Núcleos%204GHz%20com%20Gráfica%20Integrada%20HD%204600"
+  },
+    {
+    id: "500FolhasDePapelSulfiteReportPremiumA3CorBranco",
+    nome: "500 Folhas De Papel Sulfite A3 Cor Branco",
+    preco: 63.98,
+    imagem: "../500 Folhas De Papel Sulfite Report A3 Cor Branco.webp",
+    descricao: "500 Folhas De Papel Sulfite Report Premium 75g/m² A3 Cor Branco",
+    tags: ["A3", "falha", "papelaria", "impreção"],
+    categoria: "papelaria",
+    whatsapp: "https://wa.me/55289992788?text=Olá,%20gostaria%20de%20saber%20sobre%20o%20Processador%20Gamer%20Intel%20Core%20i7-4790%204%20Núcleos%204GHz%20com%20Gráfica%20Integrada%20HD%204600"
+  },
+    {
+    id: "BlocoCansonDesenhoBrancoA2Com20",
+    nome: "Bloco Canson Desenho Branco Com 20",
+    preco: 78.88,
+    imagem: "../Bloco Canson Desenho Branco A2 420 X 597 Mm Com 20.webp",
+    descricao: "Bloco Canson Desenho Branco 200g/m² A2 420 X 597 Mm Com 20  ",
+    tags: ["A2", "papelaria", "folha", "impreção"],
+    categoria: "papelaria",
+    whatsapp: "https://wa.me/55289992788?text=Olá,%20gostaria%20de%20saber%20sobre%20o%20Processador%20Gamer%20Intel%20Core%20i7-4790%204%20Núcleos%204GHz%20com%20Gráfica%20Integrada%20HD%204600"
   }
-];
+]
