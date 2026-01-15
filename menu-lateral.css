@@ -3,13 +3,13 @@
     --menu-vertical: rgba(182, 182, 182, 0.164);
     --menu-vertical-a-hover: rgba(148, 148, 148, 0.164);
     --menu-vertical-a: rgb(0, 0, 0);
-    --submenu: rgba(0, 0, 0, 0.164) ;
+    --submenu: rgba(241, 241, 241, 0.164) ;
 }
 /*------------------------------------//-------------------------------*/
 [data-theme="dark"] {
     --menu-vertical: rgba(255, 255, 255, 0.164);
     --menu-vertical-a-hover: rgba(255, 255, 255, 0.322);
-    --submenu: rgba(255, 255, 255, 0.164) ;
+    --submenu: rgba(255, 255, 255, 0.027) ;
     --menu-vertical-a: rgb(255, 255, 255);
 }
 /*------------------------------------//-------------------------------*/
@@ -82,3 +82,41 @@
   transform: rotate(180deg);
 }
 /*------------------------------------//-------------------------------*/
+
+/* Adicionar ao menu-lateral.css */
+.menu-vertical .submenu {
+    max-height: 200%;
+    overflow-y: auto;
+}
+
+.menu-vertical .submenu a[data-tag] {
+    font-size: 0.9rem;
+    padding: 8px 20px;
+    color: var(--menu-vertical-a);
+    background: rgba(190, 190, 190, 0.1);
+    margin: 2px 10px;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+.menu-vertical .submenu a[data-tag]:hover {
+    background: rgba(136, 136, 136, 0.2);
+}
+
+.menu-vertical .dropdown > a {
+    font-weight: 600;
+}
+
+/* Scrollbar personalizada para submenus */
+.menu-vertical .submenu::-webkit-scrollbar {
+    width: 4px;
+}
+
+.menu-vertical .submenu::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.menu-vertical .submenu::-webkit-scrollbar-thumb {
+    background: var(--menu-vertical-a-hover);
+    border-radius: 2px;
+}

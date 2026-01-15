@@ -45,13 +45,13 @@ const PRODUTOS = [
     preco: 667.90,
     imagem: "../PlacaMãeA520MKV2AMDAM4MATXDDR4GigabyteCorPreto.webp",
     descricao: "Caderno de anotação com molas",
-    tags: ["Placa mão", "PC", "Computador", "informatica"],
+    tags: ["Placa mãe", "PC", "Computador", "informatica"],
     categoria: "informatica",
     whatsapp: "https://wa.me/55289992788?text=Olá,%20gostaria%20de%20saber%20sobre%20a%20Placa%20Mãe%20A520M%20K%20V2%20AMD%20AM4%20MATX%20DDR4%20Gigabyte%20Cor%20Preto"
   },
     {
-    id: "Processador-Gamer-Intel-Core-i7-4790",
-    nome: "Processador Gamer Intel Core i7-4790 4 Núcleos 4GHz com Gráfica Integrada HD 4600",
+    id: "Processador-Intel-Core-i7-4790",
+    nome: "Processador Intel Core i7-4790 4 Núcleos 4GHz com Gráfica Integrada HD 4600",
     preco: 355.00,
     imagem: "../Core i7-4790 4 Núcleos.webp",
     descricao: "Caderno de anotação com molas",

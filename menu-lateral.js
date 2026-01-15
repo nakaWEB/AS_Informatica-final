@@ -1,108 +1,159 @@
-const dados = [
+// Novo menu-lateral-tags.js
+const dadosTags = [
     {
-        titulo: 'Impressão',
-        itens: [
-            { nome: 'Folha A1', url: 'https://wa.me/5511999999999?text=Olá,%20gostaria%20de%20saber%20sobre%20Folha%20A1' },
-            { nome: 'Folha A2', url: 'https://wa.me/5511999999999?text=Olá,%20gostaria%20de%20saber%20sobre%20Folha%20A2' },
-            { nome: 'Folha A3', url: 'https://wa.me/5511999999999?text=Olá,%20gostaria%20de%20saber%20sobre%20Folha%20A3' },
-            { nome: 'Folha A4', url: 'https://wa.me/5511999999999?text=Olá,%20gostaria%20de%20saber%20sobre%20Folha%20A4' },
-            { nome: 'Folha A5', url: 'https://wa.me/5511999999999?text=Olá,%20gostaria%20de%20saber%20sobre%20Folha%20A5' },
-            { nome: 'Folha A6', url: 'https://wa.me/5511999999999?text=Olá,%20gostaria%20de%20saber%20sobre%20Folha%20A6' }
-        ]
+        titulo: 'Material Escolar',
+        tags: ['material escolar', 'lapis', 'caneta', 'caderno', 'papelaria', 'escolar', 'cores', 'desenho', 'arte']
     },
     {
-        titulo: 'Cabos',
-        itens: [
-            { nome: 'Cabo VGA', url: 'https://wa.me/5511999999999?text=Olá,%20gostaria%20de%20saber%20sobre%20Cabo%20VGA' },
-            { nome: 'Cabo HDMI', url: 'https://wa.me/5511999999999?text=Olá,%20gostaria%20de%20saber%20sobre%20Cabo%20HDMI' },
-            { nome: 'Adaptador HDMI', url: 'https://wa.me/5511999999999?text=Olá,%20gostaria%20de%20saber%20sobre%20Adaptador%20HDMI' },
-            { nome: 'Adaptador VGA', url: 'https://wa.me/5511999999999?text=Olá,%20gostaria%20de%20saber%20sobre%20Adaptador%20VGA' },
-            { nome: 'Cabo de Rede', url: 'https://wa.me/5511999999999?text=Olá,%20gostaria%20de%20saber%20sobre%20Cabo%20de%20Rede' }
-        ]
+        titulo: 'Informática',
+        tags: ['informatica', 'PC', 'computador', 'processador', 'placa mãe', 'intel', 'AMD']
+    },
+    {
+        titulo: 'Impressão',
+        tags: ['impressão', 'folha', 'A1', 'A2', 'A3', 'A4', 'A5', 'A6', 'cartolina']
+    },
+    {
+        titulo: 'Cabos e Acessórios',
+        tags: ['cabo', 'VGA', 'HDMI', 'adaptador', 'rede']
     },
     {
         titulo: 'Adesivos',
-        itens: [
-            { nome: 'Adesivo de Recorte', url: 'https://wa.me/5511999999999?text=Olá,%20gostaria%20de%20saber%20sobre%20Adesivo%20de%20Recorte' },
-            { nome: 'Adesivo Impreço', url: 'https://wa.me/5511999999999?text=Olá,%20gostaria%20de%20saber%20sobre%20Adesivo%20Impreço' },
-            { nome: 'Adesivo Translúcido', url: 'https://wa.me/5511999999999?text=Olá,%20gostaria%20de%20saber%20sobre%20Adesivo%20Translúcido' }
-        ]
+        tags: ['adesivo', 'recorte', 'impreço', 'translúcido']
     },
     {
-        titulo: 'Folhas',
-        itens: [
-            { nome: 'Folha A1', url: 'https://wa.me/5511999999999?text=Olá,%20gostaria%20de%20saber%20sobre%20Folha%20A1' },
-            { nome: 'Folha A2', url: 'https://wa.me/5511999999999?text=Olá,%20gostaria%20de%20saber%20sobre%20Folha%20A2' },
-            { nome: 'Folha A3', url: 'https://wa.me/5511999999999?text=Olá,%20gostaria%20de%20saber%20sobre%20Folha%20A3' },
-            { nome: 'Folha A4', url: 'https://wa.me/5511999999999?text=Olá,%20gostaria%20de%20saber%20sobre%20Folha%20A4' },
-            { nome: 'Folha A5', url: 'https://wa.me/5511999999999?text=Olá,%20gostaria%20de%20saber%20sobre%20Folha%20A5' },
-            { nome: 'Folha A6', url: 'https://wa.me/5511999999999?text=Olá,%20gostaria%20de%20saber%20sobre%20Folha%20A6' },
-            { nome: 'Cartolina', url: 'https://wa.me/5511999999999?text=Olá,%20gostaria%20de%20saber%20sobre%20Cartolina' }
-        ]
-    },
-    {
-        titulo: 'Canetas e Lapis',
-        itens: [
-            { nome: 'Caneta esferografica', url: 'https://wa.me/5511999999999?text=Olá,%20gostaria%20de%20saber%20sobre%20Caneta%20esferografica' },
-            { nome: 'Lapis faber Castelo', url: 'https://wa.me/5511999999999?text=Olá,%20gostaria%20de%20saber%20sobre%20Lapis%20faber%20Castelo' }
-        ]
-    },
-    {
-        titulo: 'Tinta Impressora',
-        itens: [
-            { nome: 'EPSON M105', url: 'https://wa.me/5511999999999?text=Olá,%20gostaria%20de%20saber%20sobre%20Tinta%20EPSON%20M105' }
-        ]
+        titulo: 'Tintas',
+        tags: ['tinta', 'EPSON', 'impressora']
     }
 ];
 
-const menu = document.getElementById('menu');
+// Função para obter as tags mais populares do sistema
+function getPopularTagsForMenu() {
+    if (typeof searchEngine !== 'undefined') {
+        return searchEngine.getPopularTags(20); // Pega as 20 tags mais populares
+    }
+    
+    // Fallback se searchEngine não estiver disponível
+    const allTags = {};
+    PRODUTOS.forEach(produto => {
+        produto.tags.forEach(tag => {
+            allTags[tag] = (allTags[tag] || 0) + 1;
+        });
+    });
+    
+    return Object.entries(allTags)
+        .sort(([,a], [,b]) => b - a)
+        .slice(0, 20)
+        .map(([tag]) => tag);
+}
 
-dados.forEach(secao => {
-    const li = document.createElement('li');
-    li.className = 'dropdown';
+// Função para categorizar tags populares
+function categorizarTagsPopulares() {
+    const tagsPopulares = getPopularTagsForMenu();
+    const categorias = {};
+    
+    // Inicializar categorias
+    dadosTags.forEach(categoria => {
+        categorias[categoria.titulo] = [];
+    });
+    
+    // Categorizar tags populares
+    tagsPopulares.forEach(tag => {
+        let encontrou = false;
+        
+        dadosTags.forEach(categoria => {
+            if (categoria.tags.some(catTag => 
+                tag.toLowerCase().includes(catTag.toLowerCase()) || 
+                catTag.toLowerCase().includes(tag.toLowerCase())
+            )) {
+                categorias[categoria.titulo].push(tag);
+                encontrou = true;
+            }
+        });
+        
+        // Se não encontrou categoria, adiciona em "Outros"
+        if (!encontrou) {
+            if (!categorias['Outros']) categorias['Outros'] = [];
+            categorias['Outros'].push(tag);
+        }
+    });
+    
+    return categorias;
+}
 
-    li.innerHTML = `
-        <a href="#">${secao.titulo}</a>
-        <ul class="submenu">
-            ${secao.itens.map(item => `<li><a href="#" data-url="${item.url}">${item.nome}</a></li>`).join('')}
-        </ul>
-    `;
-    menu.appendChild(li);
-});
+// Função para renderizar o menu com tags
+function renderMenuComTags() {
+    const menu = document.getElementById('menu');
+    const tagsCategorizadas = categorizarTagsPopulares();
+    
+    // Limpar menu atual
+    menu.innerHTML = '';
+    
+    // Adicionar categorias ao menu
+    Object.entries(tagsCategorizadas).forEach(([categoria, tags]) => {
+        if (tags.length > 0) { // Só adiciona categorias que têm tags
+            const li = document.createElement('li');
+            li.className = 'dropdown';
+            
+            li.innerHTML = `
+                <a href="#">${categoria}</a>
+                <ul class="submenu">
+                    ${tags.map(tag => `
+                        <li><a href="#" data-tag="${tag}">${tag}</a></li>
+                    `).join('')}
+                </ul>
+            `;
+            
+            menu.appendChild(li);
+        }
+    });
+}
 
-// Função para redirecionar com confirmação
-function redirecionarComConfirmacao(url) {
-    if (confirm('Você será direcionado para nosso WhatsApp. Deseja continuar?')) {
-        window.open(url, '_blank');
+// Função para buscar produtos por tag
+function buscarPorTag(tag) {
+    if (typeof searchEngine !== 'undefined') {
+        const results = searchEngine.searchByTag(tag);
+        renderProducts(results);
+        
+        // Scroll suave para os resultados
+        const container = document.querySelector('.products-container');
+        container.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
     }
 }
 
-// Comportamento dos dropdowns e links
-menu.addEventListener('click', e => {
+// Event listener para cliques nas tags do menu
+document.addEventListener('click', (e) => {
     const link = e.target.closest('a');
     if (!link) return;
-
-    // Se for um link de item (tem data-url)
-    if (link.dataset.url) {
+    
+    // Se for um link de tag do submenu
+    if (link.dataset.tag) {
         e.preventDefault();
-        redirecionarComConfirmacao(link.dataset.url);
+        buscarPorTag(link.dataset.tag);
+        
+        // Fechar submenu após clicar
+        const dropdown = link.closest('.dropdown');
+        const subMenu = dropdown.querySelector('.submenu');
+        subMenu.classList.remove('ativo');
+        dropdown.querySelector('a').classList.remove('ativo');
         return;
     }
-
-    // Se for um link de categoria (dropdown)
+    
+    // Comportamento normal do dropdown
     const dropdown = link.parentElement;
     const sub = dropdown.querySelector('.submenu');
     if (!sub) return;
-
+    
     e.preventDefault();
-
-    // Toggle do submenu
+    
     const estaAberto = sub.classList.contains('ativo');
-
+    
     // Fecha todos os submenus
     document.querySelectorAll('.submenu.ativo').forEach(s => s.classList.remove('ativo'));
     document.querySelectorAll('.dropdown > a.ativo').forEach(a => a.classList.remove('ativo'));
-
+    
     // Abre o clicado se estava fechado
     if (!estaAberto) {
         sub.classList.add('ativo');
@@ -110,10 +161,7 @@ menu.addEventListener('click', e => {
     }
 });
 
-// Fecha ao clicar fora
-addEventListener('click', e => {
-    if (!e.target.closest('.menu-vertical')) {
-        document.querySelectorAll('.submenu.ativo').forEach(s => s.classList.remove('ativo'));
-        document.querySelectorAll('.dropdown > a.ativo').forEach(a => a.classList.remove('ativo'));
-    }
+// Inicializar menu quando a página carregar
+document.addEventListener('DOMContentLoaded', () => {
+    renderMenuComTags();
 });
